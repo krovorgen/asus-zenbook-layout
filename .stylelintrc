@@ -455,9 +455,6 @@
 				"unspecified": "bottomAlphabetical"
 			}
 		],
-		"at-rule-disallowed-list": [
-			"extend"
-		],
 		"at-rule-empty-line-before": [
 			"always",
 			{
@@ -718,7 +715,6 @@
 		"scss/at-else-closing-brace-space-after": "always-intermediate",
 		"scss/at-else-empty-line-before": "never",
 		"scss/at-else-if-parentheses-space-before": "always",
-		"scss/at-extend-no-missing-placeholder": null,
 		"scss/at-function-parentheses-space-before": "never",
 		"scss/at-function-pattern": null,
 		"scss/at-if-closing-brace-newline-after": "always-last-in-chain",

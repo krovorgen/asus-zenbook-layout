@@ -1,2 +1,606 @@
-@import "libs/bootstrap-reboot.min";
-@import "libs/slick.scss";
+/* @import "libs/bootstrap-reboot"; */
+@import "base/variables";
+@import "libs/libs";
+@import "base/fonts";
+@import "global";
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 30px;
+    z-index: 10;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 30px;
+        font-size: 15px;
+        line-height: 17px;
+        text-transform: uppercase;
+
+        @extend %ubuntu-medium;
+    }
+
+    &__btn {
+        margin-right: 8px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        padding: 6px 28px;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: transparent;
+        transition: 0.5s all;
+        cursor: pointer;
+
+        &:hover {
+            color: #024165;
+            background-color: #fff;
+            transition: 0.5s all;
+        }
+    }
+
+    &__phone {
+        font-size: 16px;
+        line-height: 18px;
+
+        @extend %ubuntu-bold;
+    }
+}
+
+.menu {
+    &__list-item {
+        display: inline-block;
+
+        & + .menu__list-item {
+            padding-left: 20px;
+        }
+    }
+}
+
+.top {
+    background-image: url("../img/main-bg.jpg");
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background:
+            radial-gradient(
+                45.97% 54.43% at 50% 45.57%,
+                rgba(23, 26, 28, 0) 50.28%,
+                rgba(23, 26, 28, 0.00226) 50.29%,
+                rgba(4, 5, 5, 0.82034) 58.72%,
+                rgba(5, 5, 6, 0.7927) 80.08%,
+                #000 87.89%
+            );
+        opacity: 0.4;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        img {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 55px;
+        font-size: 96px;
+        line-height: 115px;
+
+        @extend %sf-semibold;
+    }
+
+    &__descr {
+        margin: 25px 0 35px;
+        max-width: 325px;
+    }
+
+    &__social-item {
+        display: inline-block;
+        margin: 0 25px;
+    }
+
+    &__social-link {
+        opacity: 0.5;
+        transition: all 0.5s;
+
+        &:hover {
+            opacity: 1;
+            transition: all 0.5s;
+        }
+    }
+}
+
+.products {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 50px;
+    }
+
+    &__descr {
+        max-width: 440px;
+
+        p {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__slider-box {
+        position: relative;
+        padding-top: 110px;
+    }
+
+    &__slider-text {
+        position: absolute;
+        left: -200px;
+        bottom: 30px;
+        z-index: 5;
+        width: 265px;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: right;
+
+        @extend %ubuntu-medium;
+    }
+
+    &__slider {
+        max-width: 560px;
+        max-height: 300px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: -17px;
+            top: -15px;
+            border: 4px solid #fff;
+            width: 100%;
+            height: 285px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.slider-btn {
+    position: absolute;
+    right: 0;
+    bottom: -45px;
+    z-index: 5;
+    border: none;
+    padding: 16px 26px;
+    background-color: #fff;
+    cursor: pointer;
+
+    svg {
+        stroke: #000;
+    }
+
+    &__left {
+        right: 60px;
+    }
+
+    &.slick-disabled {
+        background-color: #1c1c1c;
+
+        svg {
+            stroke: #fff;
+        }
+    }
+}
+
+.benefits {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 25px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 100px;
+
+        &:first-child {
+            &::before {
+                right: -124px;
+                top: -5px;
+                width: 320px;
+                height: 48px;
+                background-image: url("../img/lines/1-2.svg");
+            }
+        }
+
+        &:first-child,
+        &:nth-child(3) {
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                background-position: 0 0;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &:nth-child(3) {
+            margin-left: 30px;
+
+            &::before {
+                left: 131px;
+                top: -90px;
+                width: 463px;
+                height: 62.5px;
+                background-image: url("../img/lines/2-3.svg");
+            }
+
+            &::after {
+                left: 411px;
+                top: 5px;
+                width: 200px;
+                height: 39px;
+                background-image: url("../img/lines/1-2.svg");
+            }
+        }
+
+        &:nth-child(even) {
+            margin-left: 40px;
+            transform: translateY(15px);
+        }
+
+        &:nth-child(4) {
+            margin-left: 60px;
+        }
+    }
+
+    &__num {
+        margin-right: 10px;
+        font-size: 36px;
+        line-height: 41px;
+
+        @extend %ubuntu-bold;
+    }
+
+    &__img {
+        position: relative;
+        margin-right: 32px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: -17px;
+            top: -15px;
+            z-index: -1;
+            border: 4px solid #fff;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    &__info {
+        width: 300px;
+        min-height: 130px;
+    }
+
+    &__info-title {
+        margin-bottom: 10px;
+        font-size: 21px;
+        line-height: 24px;
+
+        @extend %ubuntu-bold;
+    }
+
+    &__info-descr {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+.specification {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 25px;
+    }
+
+    &__box {
+        position: relative;
+        margin-top: 10px;
+        width: 280px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__box-1::before {
+        left: 100px;
+        top: 15px;
+        width: 325px;
+        height: 120px;
+        background-image: url("../img/specification/1.svg");
+    }
+
+    &__box-2::before {
+        left: 161px;
+        top: -10px;
+        width: 430px;
+        height: 29px;
+        background-image: url("../img/specification/2.svg");
+    }
+
+    &__box-3::before {
+        left: -175px;
+        top: 15px;
+        width: 156px;
+        height: 80px;
+        background-image: url("../img/specification/3.svg");
+    }
+
+    &__box-4::before {
+        left: -255px;
+        top: 15px;
+        width: 234px;
+        height: 19px;
+        background-image: url("../img/specification/4.svg");
+    }
+
+    &__box-title {
+        margin-bottom: 10px;
+        font-size: 21px;
+        line-height: 28px;
+
+        @extend %ubuntu-bold;
+    }
+
+    &__box-descr {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    &__box-2 {
+        margin-top: 200px;
+    }
+
+    &__box-4 {
+        margin-top: 160px;
+    }
+}
+
+.questions {
+    &__items {
+        padding-bottom: 15px;
+        max-width: 757px;
+    }
+
+    &__item {
+        max-width: 690px;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    &__item-title {
+        position: relative;
+        margin-bottom: 4px;
+        padding: 20px 10px 20px 40px;
+        font-size: 21px;
+        line-height: 28px;
+        color: rgba(#fff, 0.8);
+        cursor: pointer;
+
+        &::before {
+            content: url("../img/arrow-bottom.svg");
+            position: absolute;
+            right: -45px;
+            z-index: 5;
+            transition: all 0.3s;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -72px;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 67px;
+            background-color: #fff;
+        }
+
+        @extend %ubuntu-medium;
+    }
+
+    &__item-descr {
+        display: none;
+        margin: 0 0 4px;
+        padding: 0 15px 75px 50px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    &__item-title.in::before {
+        transform: rotate(180deg);
+    }
+}
+
+.contacts {
+    &__inner {
+        display: flex;
+        padding-left: 25px;
+    }
+
+    &__info {
+        margin-right: 60px;
+        width: 240px;
+    }
+
+    &__info-box {
+        margin-bottom: 30px;
+    }
+
+    &__info-title {
+        margin: 0 0 13px;
+        font-size: 21px;
+        line-height: 24px;
+
+        @extend %ubuntu-bold;
+    }
+
+    &__form {
+        margin-right: 106px;
+        width: 570px;
+    }
+
+    &__form-title {
+        margin: 0 0 13px;
+        font-size: 21px;
+        line-height: 24px;
+
+        @extend %ubuntu-bold;
+    }
+
+    &__form-descr {
+        margin: 0 0 12px;
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    &__form-line {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__form-input {
+        border: none;
+        padding: 15px;
+        width: 49%;
+        height: 46px;
+        font-size: 13px;
+        line-height: 15px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0.95;
+
+        &::placeholder {
+            color: rgba(#fff, 0.8);
+        }
+
+        @extend %ubuntu-regular;
+    }
+
+    &__form-btn {
+        margin-top: 20px;
+        margin-right: 8px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        padding: 6px 28px;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: transparent;
+        transition: 0.5s all;
+        cursor: pointer;
+
+        &:hover {
+            color: #024165;
+            background-color: #fff;
+            transition: 0.5s all;
+        }
+    }
+
+    &__form-textarea {
+        margin-top: 10px;
+        border: none;
+        padding: 15px;
+        width: 570px;
+        height: 144px;
+        font-size: 13px;
+        line-height: 15px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0.95;
+
+        &::placeholder {
+            color: rgba(#fff, 0.8);
+        }
+
+        @extend %ubuntu-regular;
+    }
+
+    &__social-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__social-link {
+        opacity: 0.5;
+        transition: all 0.5s;
+
+        &:hover {
+            opacity: 1;
+            transition: all 0.5s;
+        }
+    }
+
+    &__social-item {
+        margin: 14px 0;
+    }
+
+    &__info-email:hover,
+    &__info-phone:hover {
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    &__info-phone,
+    &__info-email {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 32px;
+
+    &__copy {
+        font-size: 13px;
+        line-height: 15px;
+        text-align: right;
+        color: rgba(#fff, 0.64);
+    }
+}
+
+@import "blocks/media";
