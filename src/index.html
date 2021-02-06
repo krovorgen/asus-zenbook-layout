@@ -11,12 +11,15 @@
         <header class="header">
             <div class="container">
                 <div class="header__inner">
-                    <a href="#" class="logo">
+                    <a href="#top" class="logo">
                         <picture class="logo__img">
                             <img src="img/logo-mobile.svg" alt="logo" />
                         </picture>
                     </a>
                     <nav class="menu">
+                        <button class="menu__btn">
+                            <span class="menu__btn-line"></span>
+                        </button>
                         <ul class="menu__list">
                             <li class="menu__list-item">
                                 <a href="#products" class="menu__list-link"
@@ -43,6 +46,13 @@
                                     >КОНТАКТЫ</a
                                 >
                             </li>
+                            <li class="menu__list-phone">
+                                <a
+                                    href="tel:+88001002787"
+                                    class="header__phone-menu"
+                                    >8 (800) 100 27 87</a
+                                >
+                            </li>
                         </ul>
                     </nav>
                     <div class="header__info">
@@ -55,7 +65,7 @@
             </div>
         </header>
 
-        <section class="page-section top">
+        <section id="top" class="page-section top">
             <div class="page-section__wrapper top__wrapper">
                 <div class="container">
                     <div class="top__inner">
@@ -293,8 +303,11 @@
                             </div>
                         </div>
 
-                        <div class="specification__item">
+                        <div
+                            class="specification__item specification__item--center"
+                        >
                             <img
+                                class="specification__item-img"
                                 src="img/specification/main.png"
                                 alt="notebook"
                             />
@@ -528,8 +541,32 @@
         </section>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="js/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
         <script src="js/libs.min.js"></script>
+        <script>
+            /* $(function () {
+            $.scrollify({
+                section: ".page-section",
+                overflowScroll: true,
+                scrollSpeed: 1,
+                scrollbars: true,
+                touchScroll: true,
+            });
+        }); */
+            $(window).resize(function () {
+                const mediaQuery = window.matchMedia('(min-width: 1100px)')
+                if (mediaQuery.matches) {
+                    $.scrollify({
+                        section: '.page-section',
+                        overflowScroll: true,
+                        scrollSpeed: 1,
+                        scrollbars: true,
+                        touchScroll: true,
+                    })
+                }
+            })
+        </script>
         <script src="js/script.js"></script>
     </body>
 </html>
