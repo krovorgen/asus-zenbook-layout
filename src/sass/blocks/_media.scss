@@ -66,22 +66,6 @@
     .benefits__item:nth-child(3)::after {
         width: 38%;
     }
-
-    .specification__item-img {
-        width: 80%;
-    }
-
-    .specification__item--center {
-        text-align: center;
-    }
-
-    .specification__box-2 {
-        margin-top: 190px;
-    }
-
-    .specification__box-4 {
-        margin-top: 150px;
-    }
 }
 
 @media (max-width: 1180px) {
@@ -385,6 +369,20 @@
         width: 100%;
         text-align: center;
     }
+
+    .specification__item--center {
+        text-align: center;
+    }
+
+    .specification {
+        &__item--left {
+            margin-right: 0;
+        }
+
+        &__item--right {
+            margin-left: 0;
+        }
+    }
 }
 
 @media (max-width: 880px) {
@@ -399,10 +397,6 @@
     .contacts__info-box {
         width: 30%;
     }
-}
-
-@media (max-width: 780px) {
-
 }
 
 @media (max-width: 680px) {
