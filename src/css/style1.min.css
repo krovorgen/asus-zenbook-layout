@@ -1,0 +1,96 @@
+@font-face {
+    src: url(../fonts/SFProDisplay-Light.woff2) format('woff2'),
+        url(../fonts/SFProDisplay-Light.woff) format('woff');
+    font-family: 'SFProDisplay-Light', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src: url(../fonts/SFProDisplay-Regular.woff2) format('woff2'),
+        url(../fonts/SFProDisplay-Regular.woff) format('woff');
+    font-family: 'SFProDisplay-Regular', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src: url(../fonts/SFProDisplay-Medium.woff2) format('woff2'),
+        url(../fonts/SFProDisplay-Medium.woff) format('woff');
+    font-family: 'SFProDisplay-Medium', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src: url(../fonts/SFProDisplay-Semibold.woff2) format('woff2'),
+        url(../fonts/SFProDisplay-Semibold.woff) format('woff');
+    font-family: 'SFProDisplay-Semibold', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src: url(../fonts/SFProDisplay-Bold.woff2) format('woff2'),
+        url(../fonts/SFProDisplay-Bold.woff) format('woff');
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+.top__social-link:hover {
+    opacity: 1;
+    transition: all 0.5s;
+}
+.questions__item-title.in::before {
+    transform: rotate(180deg);
+}
+.contacts__info-box {
+    margin-bottom: 30px;
+}
+.contacts__info-title {
+    margin: 0 0 13px;
+    font-size: 21px;
+    line-height: 24px;
+}
+.contacts__form-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+.contacts__form-input:input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+.contacts__form-input::input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+.contacts__form-btn:hover {
+    color: #024165;
+    background-color: #fff;
+    transition: 0.5s all;
+}
+.contacts__form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+.contacts__form-textarea:input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+.contacts__form-textarea::input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+.contacts__social-link:hover {
+    opacity: 1;
+    transition: all 0.5s;
+}
+.contacts__info-email:hover,
+.contacts__info-phone:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+.contacts__info-email,
+.contacts__info-phone {
+    font-size: 14px;
+    line-height: 18px;
+}
