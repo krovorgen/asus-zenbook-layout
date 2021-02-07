@@ -2,10 +2,10 @@ name: Deploy to gh-pages
 on:
   push:
     branches:
-      - rework
+      - master
   pull_request:
     branches:
-      - rework
+      - master
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
