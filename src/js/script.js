@@ -1,26 +1,5 @@
 // prettier-ignore
 /* eslint-disable */
-/* if (document.documentElement.clientWidth > 1100) {
-    const sections = [...document.getElementsByClassName('page-section')];
-    let currentSection = 0;
-
-    window.addEventListener('wheel', function (e) {
-        e.preventDefault();
-
-        (e.deltaY < 0) ? --currentSection : ++currentSection;
-
-        if (currentSection < 0) currentSection = 0;
-        else if (currentSection > (sections.length - 1)) currentSection = (sections.length - 1);
-
-        scrollToSection(currentSection);
-    });
-
-    function scrollToSection(i) {
-        document.getElementById(sections[i].id).scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-}; */
 
 $(function () {
     $("a[href^='#']").click(function () {
