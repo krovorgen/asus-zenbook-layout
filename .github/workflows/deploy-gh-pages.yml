@@ -1,5 +1,11 @@
 name: Deploy to gh-pages
-on: [push]
+on:
+  push:
+    branches:
+      - rework
+  pull_request:
+    branches:
+      - rework
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
