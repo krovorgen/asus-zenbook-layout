@@ -60,6 +60,13 @@ gulp.task('fonts', () => {
         .pipe(browserSync.stream())
 })
 
+gulp.task('css', () => {
+    return gulp
+        .src('src/css-optimiz/**/*')
+        .pipe(gulp.dest('dist/css-optimiz'))
+        .pipe(browserSync.stream())
+})
+
 gulp.task('mailer', () => {
     return gulp
         .src('src/mailer/**/*')
@@ -101,6 +108,7 @@ gulp.task(
         'html',
         'images',
         'mailer',
-        'pages'
+        'pages',
+        'css'
     )
 )
